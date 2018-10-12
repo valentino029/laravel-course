@@ -28,8 +28,33 @@
 // });
 
 Route::get('/', 'HomeController@index');
+
 Route::get('/karyawan', 'KaryawanController@index');
+Route::get('/karyawan/tambah', 'KaryawanController@tambah');
+Route::get('/karyawan/edit/{id}', 'KaryawanController@edit');
+Route::get('/karyawan/delete/{id}', 'KaryawanController@delete');
+Route::get('/karyawan/{id}', 'KaryawanController@show');
+
 Route::get('/jabatan', 'JabatanController@index');
+Route::get('/jabatan/tambah', 'JabatanController@tambah');
+Route::get('/jabatan/edit/{id}', 'JabatanController@edit');
+Route::get('/jabatan/delete/{id}', 'JabatanController@delete');
+Route::get('/jabatan/{id}', 'JabatanController@show');
+
 Route::get('/departement', 'DepartementController@index');
+Route::get('/departement/tambah', 'DepartementController@tambah');
+Route::get('/departement/edit/{id}', 'DepartementController@edit');
+Route::get('/departement/delete/{id}', 'DepartementController@delete');
+Route::get('/departement/{id}', 'DepartementController@show');
+
 Route::get('/arsip', 'ArsipController@index');
+Route::get('/arsip/tambah', 'ArsipController@tambah');
+Route::get('/arsip/edit/{id}', 'ArsipController@edit');
+Route::get('/arsip/delete/{id}', 'ArsipController@delete');
+Route::get('/arsip/{id}', 'ArsipController@show');
+
 Route::get('/inventori', 'InventoriController@index');
+Route::get('/inventori/tambah', 'InventoriController@tambah');
+Route::get('/inventori/edit/{id}', 'InventoriController@edit');
+Route::get('/inventori/delete/{id}', 'InventoriController@delete');
+Route::get('/inventori/{id}', 'InventoriController@show');

@@ -1,8 +1,8 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="#" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>W</b>CN</span>
+        <span class="logo-mini"><b>D</b>K</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>Data</b>Karyawan</span>
     </a>
@@ -221,13 +221,13 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="dist/img/avatar.png" class="user-image" alt="User Image">
+                        <img src="/dist/img/avatar.png" class="user-image" alt="User Image">
                         <span class="hidden-xs">Febrian Valentino</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                            <img src="/dist/img/avatar.png" class="img-circle" alt="User Image">
 
                             <p>
                                 Febrian Valentino

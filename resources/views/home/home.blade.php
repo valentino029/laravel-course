@@ -7,6 +7,7 @@
 
 @section('content-header')
 <section class="content-header">
+    {!!$unescaped!!}
     <h1>
         Dashboard
         <small>Homepage</small>
@@ -17,6 +18,7 @@
     </ol>
 </section>
 @endsection
+
 @section('content')
     
 @endsection
