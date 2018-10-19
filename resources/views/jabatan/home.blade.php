@@ -45,6 +45,7 @@
                         <tr>
                             <td>{{$jab->no}}</td>
                             <td><a href="/jabatan/{{ $jab->no }}">{{$jab->nama_jabatan}}</a></td>
+                            
                             <td>
                                 <a href="/jabatan/edit/{{ $jab->no }}">
                                     <button class="btn-primary">Edit</button>

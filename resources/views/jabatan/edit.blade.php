@@ -28,12 +28,19 @@
                       </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
-                        <form role="form">
+                      <form role="form" action="/jabatan/update" method="POST">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                <input type="hidden" class="form-control" name="no" value="{{ $data->no}}" />
+                                <input type="hidden" name="_method" value="PUT"/>
+                            </div>
                           <!-- text input -->
+                          
                           <div class="form-group">
                             <label>Nama Jabatan</label>
-                            <input type="text" class="form-control" placeholder="Enter ...">
-                          </div>
+                            <input type="text" class="form-control" name="nama_jabatan" value="{{ $data->nama_jabatan}}" placeholder="Nama Jabatan">
+                        </div>
                           <div class="box-footer">
                               <button type="submit" class="btn btn-primary">Submit</button>
                           </div>

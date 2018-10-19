@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Departement;
 
 class DepartementController extends Controller
 {
     public function index(){
-        $departement = DB::table('departement')->get();
+        $departement = Departement::all();
         return view('departement/home',['data'=>$departement]);
     }
 
     public function show($id){
-        $departement = DB::table('departement')->where('no', $id)->first();
+        $departement = Departement::where('id', $id)->first();
         return view('departement/show',['data' => $departement]);
     }
 

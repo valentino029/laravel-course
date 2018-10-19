@@ -27,11 +27,15 @@
                       </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
-                        <form role="form">
+                      <form role="form" action="/jabatan/store" method="POST">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            </div>
                           <!-- text input -->
                           <div class="form-group">
                             <label>Nama Jabatan</label>
-                            <input type="text" class="form-control" placeholder="Enter ...">
+                            <input type="text" class="form-control" name="nama_jabatan" placeholder="Enter ...">
                           </div>
                           <div class="box-footer">
                               <button type="submit" class="btn btn-primary">Submit</button>

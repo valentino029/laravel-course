@@ -46,6 +46,15 @@
                               <td>Nama Departement</td> 
                               <td>{{ $data->nama_departement}}</td>
                             </tr>
+
+                            @foreach ($data->jabatan as $item)
+
+                            <li class="list-group-item">
+                              <strong><i class="fa fa-map-marker margin-r-5"></i> {{$item->nama_jabatan}}</strong>
+
+                            </li>
+                                
+                            @endforeach
                         </tbody>
                         </table>
                         </div><!-- /.col -->

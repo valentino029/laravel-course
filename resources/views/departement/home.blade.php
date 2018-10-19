@@ -43,13 +43,13 @@
                       
                         @foreach ($data as $dept)
                         <tr>
-                            <td>{{$dept->no}}</td>
-                            <td><a href="/departement/{{ $dept->no }}">{{$dept->nama_departement}}</a></td>
+                            <td>{{$dept->id}}</td>
+                            <td><a href="/departement/show/{{ $dept->id }}">{{$dept->nama_departement}}</a></td>
                             <td>
-                                <a href="/departement/edit/{{ $dept->no }}">
+                                <a href="/departement/edit/{{ $dept->id }}">
                                     <button class="btn-primary">Edit</button>
                                 </a>
-                                <a href="/departement/edit/{{ $dept->no }}">
+                                <a href="/departement/edit/{{ $dept->id }}">
                                     <button class="btn-danger">Delete</button>
                                 </a>
                             </td>

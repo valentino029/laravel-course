@@ -31,21 +31,27 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/karyawan', 'KaryawanController@index');
 Route::get('/karyawan/tambah', 'KaryawanController@tambah');
+Route::get('/karyawan/{id}', 'KaryawanController@show');
 Route::get('/karyawan/edit/{id}', 'KaryawanController@edit');
 Route::get('/karyawan/delete/{id}', 'KaryawanController@delete');
-Route::get('/karyawan/{id}', 'KaryawanController@show');
+Route::post('/karyawan/store', 'KaryawanController@store');
+Route::put('/karyawan/update', 'KaryawanController@update');
+
 
 Route::get('/jabatan', 'JabatanController@index');
 Route::get('/jabatan/tambah', 'JabatanController@tambah');
 Route::get('/jabatan/edit/{id}', 'JabatanController@edit');
 Route::get('/jabatan/delete/{id}', 'JabatanController@delete');
 Route::get('/jabatan/{id}', 'JabatanController@show');
+Route::post('/jabatan/store', 'JabatanController@store');
+Route::put('/jabatan/update', 'JabatanController@update');
+
 
 Route::get('/departement', 'DepartementController@index');
 Route::get('/departement/tambah', 'DepartementController@tambah');
 Route::get('/departement/edit/{id}', 'DepartementController@edit');
 Route::get('/departement/delete/{id}', 'DepartementController@delete');
-Route::get('/departement/{id}', 'DepartementController@show');
+Route::get('/departement/show/{id}', 'DepartementController@show');
 
 Route::get('/arsip', 'ArsipController@index');
 Route::get('/arsip/tambah', 'ArsipController@tambah');

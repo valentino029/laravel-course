@@ -36,6 +36,7 @@
                             <tr>
                               <th>No</th>
                               <th>Nama Inventori</th>
+                              <th>Nama Arsip</th>
                               <th>Action</th>
                             </tr>
                             </thead>
@@ -45,7 +46,8 @@
                               @foreach ($data as $inven)
                               <tr>
                                   <td>{{$inven->no}}</td>
-                                  <td><a href="/inventori/{{ $inven->no }}">{{$inven->nama_inventori}}</a></td>
+                                  <td><a href="/inventori/{{ $inven->no }}">{{$inven->inventori_name}}</a></td>
+                                  <td><a href="/arsip/{{ $inven->arsip->id }}">{{$inven->arsip->nama_arsip}}</a></td>
                                   <td>
                                       <a href="/inventori/edit/{{ $inven->no }}">
                                           <button class="btn-primary">Edit</button>

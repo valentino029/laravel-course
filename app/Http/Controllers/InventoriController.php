@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Inventori;
 
 class InventoriController extends Controller
 {
     public function index(){
-        $inventori = DB::table('inventori')->get();
+        $inventori = Inventori::all();
         return view('inventori/home',['data'=>$inventori]);
     }
 

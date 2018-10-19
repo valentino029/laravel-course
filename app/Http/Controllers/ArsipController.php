@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Arsip;
 
 
 class ArsipController extends Controller
 {
     public function index(){
-        $arsip = DB::table('arsip')->get();
+        $arsip = Arsip::all();
         return view('arsip/home',['data'=>$arsip]);
     }
 

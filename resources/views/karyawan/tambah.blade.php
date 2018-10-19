@@ -27,23 +27,27 @@
                       </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
-                        <form role="form">
+                      <form role="form" action="/karyawan/store" method="POST">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            </div>
                           <!-- text input -->
                           <div class="form-group">
                             <label>Nama Karyawan</label>
-                            <input type="text" class="form-control" placeholder="Enter ...">
+                            <input type="text" class="form-control" name="nama_karyawan" placeholder="Enter ...">
                           </div>
                           <div class="form-group">
                             <label>Alamat</label>
-                            <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                            <input type="text" class="form-control" name="alamat" placeholder="Enter ...">
                           </div>
                           <div class="form-group">
                             <label>No Telepon</label>
-                            <input type="text" class="form-control" placeholder="Enter ...">
+                            <input type="text" class="form-control" name="telepon" placeholder="Enter ...">
                           </div>
                           <div class="form-group">
                             <label>Jabatan</label>
-                            <input type="text" class="form-control" placeholder="Enter ...">
+                            <input type="text" class="form-control" name="jabatan" placeholder="Enter ...">
                           </div>
                           <div class="box-footer">
                               <button type="submit" class="btn btn-primary">Submit</button>

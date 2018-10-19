@@ -36,6 +36,7 @@
                             <tr>
                               <th>No</th>
                               <th>Nama Arsip</th>
+                              <th>Nama Inventori</th>
                               <th>Action</th>
                             </tr>
                             </thead>
@@ -46,7 +47,9 @@
                               <tr>
                                   <td>{{$arsp->no}}</td>
                                   <td><a href="/arsip/{{ $arsp->no }}">{{$arsp->nama_arsip}}</a></td>
+                                  <td><a href="/inventori/{{ $arsp->inventori->id }}">{{$arsp->inventori->inventori_name}}</a></td>
                                   <td>
+
                                       <a href="/arsip/edit/{{ $arsp->no }}">
                                           <button class="btn-primary">Edit</button>
                                       </a>
