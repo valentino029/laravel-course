@@ -7,7 +7,6 @@
 
 @section('content-header')
 <section class="content-header">
-    
     <h1>
         Dashboard
         <small>Homepage</small>

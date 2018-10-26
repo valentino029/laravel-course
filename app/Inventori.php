@@ -18,6 +18,10 @@ class Inventori extends Model
         return $this->belongsTo('App\Arsip','id');
     }
 
+    public function Karyawan(){
+        return $this->belongsToMany('App\Karyawan');
+    }
+
     use softDeletes;
     protected $dates = ['deleted_at'];
     

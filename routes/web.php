@@ -64,3 +64,6 @@ Route::get('/inventori/tambah', 'InventoriController@tambah');
 Route::get('/inventori/edit/{id}', 'InventoriController@edit');
 Route::get('/inventori/delete/{id}', 'InventoriController@delete');
 Route::get('/inventori/{id}', 'InventoriController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

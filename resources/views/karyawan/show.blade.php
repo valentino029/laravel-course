@@ -36,7 +36,7 @@
                           <p align="center">
                             <img src="/dist/img/avatar.png" alt="User Image">
                             <a class="users-list-name" href="#">{{ $data->nama_karyawan}}</a>
-                            <span class="users-list-date">{{$data->jabatan}}</span>
+                            <span class="users-list-date">{{$data->jabatan->nama_jabatan}}</span>
                           </p>
                         </div><!-- /.col -->
                         <div class="col-md-8">
@@ -57,7 +57,7 @@
                             </tr>
                             <tr>
                                 <td>Jabatan</td> 
-                                <td>{{$data->jabatan}}</td>                        
+                                <td>{{$data->jabatan->nama_jabatan}}</td>                        
                             </tr>
                         </tbody>
                         </table>

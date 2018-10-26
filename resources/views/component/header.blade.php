@@ -218,11 +218,25 @@
                         </li>
                     </ul>
                 </li>
+
+                @guest
+                <li class="dropdown user user-menu">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                <li class="dropdown user user-menu">
+                    @if (Route::has('register'))
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                </li>
+                @else
+
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/dist/img/avatar.png" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Febrian Valentino</span>
+                        <span class="hidden-xs">
+                            {{-- {{session('karyawan')->nama_karyawan}} --}}
+                        </span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -230,8 +244,8 @@
                             <img src="/dist/img/avatar.png" class="img-circle" alt="User Image">
 
                             <p>
-                                Febrian Valentino
-                                <small>Member since Nov. 2012</small>
+                                {{-- {{session('karyawan')->nama_karyawan}} - {{session('karyawan')->jabatan->nama_jabatan}} --}}
+                                <small></small>
                             </p>
                         </li>
                         <!-- Menu Body -->
@@ -255,11 +269,22 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                
+
+                                <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                             </div>
                         </li>
                     </ul>
                 </li>
+                @endguest
                 <!-- Control Sidebar Toggle Button -->
                 <li>
                     <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>

@@ -39,22 +39,26 @@
                          <th>Alamat</th>
                          <th>No Telepon</th>
                          <th>Jabatan</th>
+                         <th>Inventori</th>
                          <th>Action</th>
                        </tr>
                        </thead>
                        <tbody>
                            @foreach ($data as $kar)
                            <tr>
-                                <td>{{$kar->no}}</td>
-                                <td><a href="/karyawan/{{ $kar->no }}">{{$kar->nama_karyawan}}</a></td>
+                                <td>{{$kar->id}}</td>
+                                <td><a href="/karyawan/{{ $kar->id }}">{{$kar->nama_karyawan}}</a></td>
                                 <td>{{$kar->alamat}}</td>
                                 <td>{{$kar->telepon}}</td>
-                                <td>{{$kar->jabatan}}</td>
+                                <td>{{$kar->jabatan->nama_jabatan}}</td>
+                                <td>@foreach ($kar->inventori as $item)
+                                    {{$item->inventori_name}},
+                                @endforeach
                                 <td>
-                                <a href="/karyawan/edit/{{ $kar->no }}">
+                                <a href="/karyawan/edit/{{ $kar->id }}">
                                     <button class="btn-primary">Edit</button>
                                 </a>
-                                <a href="/karyawan/delete/{{ $kar->no }}">
+                                <a href="/karyawan/delete/{{ $kar->id }}">
                                     <button class="btn-danger">Delete</button>
                                 </a>
                                 </td>

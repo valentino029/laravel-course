@@ -18,4 +18,8 @@ class Jabatan extends Model
     public function departement(){
         return $this->belongsTo('App\Departement');
     }
+
+    public function karyawan(){
+        return $this->hasMany('App\Karyawan','id');
+    }
 }

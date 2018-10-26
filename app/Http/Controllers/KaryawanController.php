@@ -73,7 +73,7 @@ class KaryawanController extends Controller
     public function show($id){
         //$pegawai = DB::table('karyawan')->where('no', $id)->first();
         // Eloquent
-        $pegawai = Karyawan::where('no','=',$id)->first();
+        $pegawai = Karyawan::where('id','=',$id)->first();
         if(!$pegawai){
             abort(404);
         }
